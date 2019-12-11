@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+var timeoutHandle;
+function countdown(minutes) {
+    var seconds = 60;
+    var mins = minutes
+    function tick() {
+        var counter = document.getElementById("timer");
+        var current_minutes = mins-1
+        seconds--;
+        counter.innerHTML =
+        current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            timeoutHandle=setTimeout(tick, 1000);
+        } else {
+
+            if(mins > 1){
+
+               // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
+               setTimeout(function () { countdown(mins - 1); }, 1000);
+
+            }
+        }
+    }
+    tick();
+}
+
+countdown(2);
+</script>
+<title>bot or not?</title>
+<style>
+            img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+                }
+            body {
+      font-size: 20px;
+      color: black;
+      display: block;
+      justify-content: center;
+      align-items: center;
+      }
+            a {
+     text-decoration: none;
+     color:black;
+    }
+            .content{
+              display:block;
+              margin-top: 100px;
+              justify-content: center;
+              align-items: center;
+            }
+
+</style>
+</head>
+<body>
+         <a href="botornot.html">
+         <img src="bot_or_not.png" alt="captcha that says bot or not" width="170" height="80" ></a>
+     
+        <div class="content">
+        <center><img src="https://meme.xyz/uploads/posts/t/l-47267-me-fails-captcha-4-times-me.jpg" width="400px" height="400px"> 
+<br />
+        You are a bot, congratulations !
+        <br>Now go spam a website.</center>
+        </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function startTimer(duration, display) {
+    var start = Date.now(),
+        diff,
+        minutes,
+        seconds;
+    function timer() {
+        // get the number of seconds that have elapsed since 
+        // startTimer() was called
+        diff = duration - (((Date.now() - start) / 1000) | 0);
+
+        // does the same job as parseInt truncates the float
+        minutes = (diff / 60) | 0;
+        seconds = (diff % 60) | 0;
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds; 
+
+        if (diff <= 0) {
+            // add one second so that the count down starts at the full duration
+            // example 05:00 not 04:59
+            start = Date.now() + 1000;
+        }
+    };
+    // we don't want to wait a full second before the timer starts
+    timer();
+    setInterval(timer, 1000);
+}
+
+window.onload = function () {
+    var threeMinutes = 10 * 1,
+        display = document.querySelector('#time');
+    startTimer(threeMinutes, display);
+};
+</script>
+<title>bot or not?</title>
+<style>
+            img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+                }
+            body {
+      font-size: 20px;
+      color: black;
+      display: block;
+      justify-content: center;
+      align-items: center;
+      }
+            a {
+     text-decoration: none;
+     color:black;
+    }
+            .content{
+              display:block;
+              margin-top: 100px;
+              justify-content: center;
+              align-items: center;
+            }
+
+</style>
+</head>
+<body>
+         <a href="botornot.html">
+         <img src="bot_or_not.png" alt="captcha that says bot or not" width="170" height="80" ></a>
+     
+        <div class="content">
+        <center><div><span id="time"></span></div></center>
+        <img src="perhaps_pizzas.png">
+         <center>
+           
+<input id="text_a" type="text" />
+<p id="answer"></p>
+<button onclick="myFunction()">check</button>
+
+<script>
+function myFunction()
+{
+var a=document.getElementById("text_a").value;
+
+if (a=="perhaps pizzas")
+  {
+document.getElementById("answer").innerHTML="correct!<img src='http://www.gifs-paradise.com/animations/animated-gifs-fountains-06.gif'>";
+  }
+else
+  {
+document.getElementById("answer").innerHTML="oops!<img src='http://www.gifs-paradise.com/animations/animated-gifs-aliens-23.gif'>";
+  }
+}
+</script>
+<button onclick="window.location.href = 'stage8.html';">next</button>
+         </center>
+        </div>
+
+
+
+</body>
+</html>

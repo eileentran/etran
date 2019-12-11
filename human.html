@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+var timeoutHandle;
+function countdown(minutes) {
+    var seconds = 60;
+    var mins = minutes
+    function tick() {
+        var counter = document.getElementById("timer");
+        var current_minutes = mins-1
+        seconds--;
+        counter.innerHTML =
+        current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            timeoutHandle=setTimeout(tick, 1000);
+        } else {
+
+            if(mins > 1){
+
+               // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
+               setTimeout(function () { countdown(mins - 1); }, 1000);
+
+            }
+        }
+    }
+    tick();
+}
+
+countdown(2);
+</script>
+<title>bot or not?</title>
+<style>
+            img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+                }
+            body {
+      font-size: 20px;
+      color: black;
+      display: block;
+      justify-content: center;
+      align-items: center;
+      }
+            a {
+     color:black;
+    }
+            .content{
+              display:block;
+              margin-top: 100px;
+              justify-content: center;
+              align-items: center;
+            }
+
+</style>
+</head>
+<body>
+         <a href="botornot.html">
+         <img src="bot_or_not.png" alt="captcha that says bot or not" width="170" height="80" ></a>
+        <div class="content">
+        <center><img style="height:300px;width: 450px;" src="http://www.thesmokinggun.com/sites/default/files/imagecache/750x970/documents/1trumphospital.jpg"> 
+<br />
+
+        <br>Congratulations! You are a human. <br>What does it mean to be human? <br>You may be a <a href="https://www.zdnet.com/article/inside-indias-captcha-solving-economy/">sweatshop worker</a>,<br> someone who isn't <a href="https://www.w3.org/WAI/intro/captcha.php">disabled</a>, <br>a <a href="https://medium.com/@ageitgey/how-to-break-a-captcha-system-in-15-minutes-with-machine-learning-dbebb035a710">machine-learning program</a>, <br> or an <a href="https://spectrum.ieee.org/tech-talk/robotics/artificial-intelligence/artificial-intelligence-beats-captcha">artificial intelligence system.</a>
+      </center>
+        <br>
+        <br>
+        <br>
+        </div>
+
+
+
+</body>
+</html>
