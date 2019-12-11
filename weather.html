@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Define The Relationship</title>
+<style>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  h1 {
+        font-family: Futura;
+        font-size: 50px;
+    }
+  html, body {
+        font-family:Futura;
+        font-size: 22px;
+        color: white;
+        position: absolute;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+  p{
+    position:absolute;
+    left:25px;
+    z-index: 2;
+  }
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+a:visited
+          {
+               color: white;
+          }
+
+#intro{animation: fadeOut 6s;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  text-align: center;
+  top:45%;
+position:absolute;
+color:black;
+height:100%;width:100%;
+z-index:10;}
+
+@keyframes fadeOut {
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
+
+}
+
+#fade3{animation: fadein 30s infinite;
+  animation-delay: 10s;
+position:absolute;
+height:100%;width:100%}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+#cont p{ animation: fadein 2s;}
+
+#fade2{animation: flickerAnimation 25s infinite;
+  animation-delay: 15s;
+position:absolute;
+height:100%;width:100%}
+
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+
+#fade1{animation: flickerAnimation 35s infinite;
+  animation-delay:5s;
+position:absolute;
+height:100%;width:100%}
+
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+
+</style>
+</head>
+<body>
+
+</style>
+</head>
+<body>
+
+
+<p onclick="toggle(this)"; style="font-size: 20px; top: 10px;">Define The Relationship
+</p>
+
+<p style="left: 73%; bottom:15px; font-size: 14px">The time is <script>
+  var currentTime = new Date(),
+      hours = currentTime.getHours(),
+      minutes = currentTime.getMinutes();
+
+  if (minutes < 10) {
+   minutes = "0" + minutes;
+  }
+
+  var suffix = "AM";
+  if (hours >= 12) {
+    suffix = "PM";
+    hours = hours - 12;
+  }
+  if (hours == 0) {
+   hours = 12;
+  }
+
+  document.write(hours + ":" + minutes + " " + suffix)
+</script> in Providence, Rhode Island.
+
+</p>
+
+<div style=" padding:20px; width: 40%;overflow:scroll; height: 500px; display:none; position:absolute; top:70px;color:white;font-size: 28px; z-index: 99999;" id="cont">
+
+        <div><p>
+            <i>Define The Relationship</i> is a space for you to meditate on your relationship with the Sun. The Sun gives you vitality and at the same time it lets you rest. Its energy has never failed you since you were born. But during the late 1990s, the Sun been struggling to keep up with increased damage from <a href="https://www.epa.gov/ghgemissions/global-greenhouse-gas-emissions-data">emissions</a>. Naturally, it hasn't been at its best but it still tries to keep up to support you. As of lately, the sun has been going through a lot of phases. Have you checked in on them?
+
+
+            <br><br>Inspiration from Olafur Eliasson's <a href="https://olafureliasson.net/archive/artwork/WEK101003/the-weather-project"><i>The Weather Project</i></a>.
+
+        </p></div>
+    </div>
+    </body>
+
+
+<div position="absolute" id=intro>Have you had <i>the talk</i> with the Sun yet?</div>
+
+<div id=fade3>
+<iframe height="110%" width="100%" src="https://momento360.com/e/u/a597fdd5aa3f4ade8d8361b0ae34b8d5?utm_campaign=embed&utm_source=other&heading=-60&pitch=0&field-of-view=100"> </iframe></div>
+
+<div id=fade2>
+<iframe height="110%" position="absolute" width="100%" 
+src="https://momento360.com/e/u/654418e69fbf4e5cb3a55af50a64318d?utm_campaign=embed&utm_source=other&heading=-50&pitch=0&field-of-view=100"> </iframe></div>
+
+<div id=fade1>
+<iframe height="110%" width="100%" 
+src="https://momento360.com/e/u/e2dbddee5d7b42548221456f550ee961?utm_campaign=embed&utm_source=other&utm_medium=other&heading=-60&pitch=0&field-of-view=100"> </iframe></div>
+
+
+
+<script>
+
+    function toggle(ele) {
+        var cont = document.getElementById('cont');
+        if (cont.style.display == 'block') {
+            cont.style.display = 'none';
+
+            document.getElementById(ele.id).value = 'Show DIV';
+        }
+        else {
+            cont.style.display = 'block';
+            document.getElementById(ele.id).value = 'Hide DIV';
+        }
+    }
+
+
+</script>
+</html>

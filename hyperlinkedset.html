@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+
+    body {
+      background-color:black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+    h1 {
+      font-size:85px;
+      font-weight:bold;
+      color:white;
+      -webkit-font-smoothing: antialiased;
+      }
+    h2 {
+      font-size:12px;
+      font-weight:bold;
+      color:black;
+      -webkit-font-smoothing: antialiased;
+      }
+
+    html {
+      scroll-behavior: smooth;
+      }
+
+
+    a {
+      text-decoration: none;
+      color:white;}
+    a:hover {
+      text-decoration: underline;
+      color:white;}
+
+        .home{
+          position:absolute;
+          left:1px;
+          top:0px;
+          display:inline-block;
+        }
+
+        .contro-a{
+          position:absolute;
+          right:-1500px;
+          top:1px;
+          display:inline-block;
+        }
+
+        .contro-a2{
+          position:absolute;
+          right:-2720px;
+          top:1px;
+          display:inline-block;
+        }
+
+        .contro-a3{
+          position:absolute;
+          right:-4050px;
+          top:1px;
+          display:inline-block;
+        }
+
+        .video-a{
+          position:absolute;
+          top:800px;
+          left:1px;
+        }
+
+        .star-c{
+          position:absolute;
+          left:1000px;
+          bottom:25px;
+        }
+
+        .star-v{
+          position:absolute;
+          bottom:-2650px;
+          right:200px;
+        }
+
+        .head-v{
+          position:absolute;
+          bottom:-2585px;
+          right:90px;
+        }
+
+
+        .header {
+                position:relative;
+                right:400px;
+                top: 100px;
+                margin:2rem;
+                font-size:100px;
+                font-weight:bold;
+                color:white;
+                -webkit-font-smoothing: antialiased
+            }
+
+        .wrapperdown {
+                position: relative;
+                top:400px;
+                left:470px;
+                width: 100px;
+                height: 100px;
+                margin:2rem;
+
+            }
+        .wrapperright {
+                position: relative;
+                left:700px;
+                bottom:-100px;
+                width: 100px;
+                height: 100px;
+                margin:2rem;
+
+            }
+        .wrapperleft {
+                position: relative;
+                left:-620px;
+                top:100px;
+                width: 100px;
+                height: 100px;
+                margin:2rem;
+
+            }
+        .video {
+                position: absolute;
+                left:1px;
+                width: 100px;
+                height: 100px;
+                margin:2rem;
+
+            }    
+
+        .video1 {
+               position: absolute;
+               top:900px;
+            }
+        .video2 {
+               position: absolute;
+               top:1500px;
+            }
+        .video3 {
+              position: absolute;
+              top:2100px;
+            }
+        .video4 {
+              position: absolute;
+              top:2700px;
+              padding-bottom: 900px;
+            }
+
+         .contro1 {
+             position: absolute;
+             display:inline-block;
+             bottom:40px;
+             right:-1200px;
+            }
+
+         .contro2 {
+             position: absolute;
+             display:inline-block;
+             right:-2600px;
+             bottom:40px;
+            }
+
+         .contro3 {
+             position: absolute;
+             display:inline-block;
+             right:-4070px;
+             bottom:40px;
+            }
+
+         .message {
+            line-height: 12px;
+            text-align: center;
+            background:black;
+            color:black;
+            position: absolute;
+            top: -650px;
+            left: 0;
+            width: 100%;
+            height: 650px;
+            padding: 20px;
+            transition: top 500ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+            overflow: hidden;
+            box-sizing: border-box;
+            }
+          #toggle {
+            position:absolute;
+            appearance:none;
+            cursor:pointer;
+            left:-100%;
+            top:-100%;
+            }
+         #toggle + label {
+            position:absolute;
+            cursor:pointer;
+            padding:10px;
+            background: black;
+            bottom:500px;
+            margin:2rem;
+            color: white;
+            font-size:100px;
+            text-align:center;
+            -webkit-font-smoothing: antialiased;
+            cursor: pointer;
+            transition:all 700ms ease;
+            }
+          #toggle + label:after {
+            content:"?" 
+            }
+
+          .container {
+            transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+              padding:5em 3em;
+            }
+
+          #toggle:checked ~ .message {
+            top: 0;
+            }
+
+          #toggle:checked ~ .container {
+            margin-top: 650px;
+            }
+
+          #toggle:checked + label {
+            background:#dd6149;
+            }
+
+          #toggle:checked + label:after {
+            content:"Close";
+            }
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+        
+  </style>
+<title>umami</title>
+  </head>
+<body>
+
+   <div class="home">
+        <a name="home">
+        <h2>a</h2></a>
+    </div>
+
+   <input type="checkbox" name="toggle" id="toggle" />
+   <label for="toggle"></label>
+
+   <div class="wrapperdown container">
+        <a href="#video-a"><img src="noun_Food_2527949.svg" alt="fish and meat icons"/></a>
+   </div>
+
+   <div class="wrapperright container">
+         <a href="#contro1"><img src="controversy.svg" alt="head talking outspokenly"/></a>
+   </div>
+
+   <div class="wrapperleft container">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="noun_Science_1971559-01.svg" alt="chemical icon"/></span>
+   </div>
+
+   <div class="header"><a href="https://www.chinasichuanfood.com/xiao-long-bao-soup-dumplings/" target="_blank">umami</a>
+     </div></a>
+
+     <div class="video-a">
+        <a name="video-a">
+        <h2>a</h2></a>
+    </div>
+
+
+     <div class="video1 container">
+
+          <a name="video1">
+          <iframe width="560" height="315" allow="autoplay" src="https://www.youtube.com/embed/rmdHD2dc_Iw?autoplay=1?start=9" allow='autoplay; encrypted-media' frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+          </a>
+          <p style="text-align: center; font-size: 30px">scroll through video gallery <br>↓</p>
+     </div>
+     <div class="video2 container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/oMQHpVNmc_E?start=793" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     </div>
+
+    <div class="video3 container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/kIzECDSIfps?start=480" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="video4 container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/m3ZI15VjwEU?start=256" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <a href="#home" >
+          <div class="star-v"><h1>✽</h1></a></div>
+          <a href="#contro1"><div class="head-v"><img src="controversy.svg" alt="head talking outspokenly" height="90px" width= "90px"/></div></a>
+
+    <div class="contro-a">
+        <a name="contro1">
+        <h2>a</h2></a>
+    </div>
+
+    <div class="contro1 container">
+          <a href="#contro-a2">
+          <img src="https://bluejeanfoodcritic.files.wordpress.com/2014/04/general-tso.jpg" alt="chinese food takeout" width="660" height="415" ></a>
+    </div>
+
+    <div class="contro-a2">
+        <a name="contro-a2">
+        <h2>a</h2></a>
+    </div>
+
+    <div class="contro2 container">
+          <a href="#contro-a3">
+          <img src="contro2.png" alt="chinese restaurant syndrome" width="900" height="513"></a>
+    </div>
+
+    <div class="contro-a3">
+        <a name="contro-a3">
+        <h2>a</h2></a>
+    </div>
+
+    <div class="contro3 container">
+          <img src="contro3.png" alt="chinese restaurant syndrome explanation" width="1048" height="513">
+          <a href="#home" >
+          <div class="star-c"><h1>✽</h1></a></div>
+          <a href="#video-a"><img src="noun_Food_2527949.svg" alt="fish and meat icons" height="100px" width="80px"/></a>
+    </div>
+
+       <div class="message"><h1>
+        <p>&nbsp;</p>
+        <p>うま味</p>
+       <p>/uːˈmaːmi/ </p>
+     <p>from Japan in 1908</p>
+      <p>"savory"</p></h1>
+   <input type="checkbox" name="toggle" id="toggle"/>
+   <label for="toggle"></label>
+   </div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<h1 style="margin: 3%; font-size: 50px;">People taste umami through taste receptors 
+that respond to glutamatic acids. 
+Glutamic acids occur naturally in foods 
+or can be added like a seasoning.
+<br><br>
+In the body, glutamic acid is often found as glutamate,
+ a neurotransmitter. Glutamate is one of the most abundant 
+ neurotransmitters in the brain, 
+playing a crucial role in brain development.
+</h1>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+</body>
+</html>

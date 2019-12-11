@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style> 
+        .wrapper {
+                display:inline-block;
+                position: relative;
+                float:right;
+                width: 20%;
+                height: 200px;
+                border: solid 1px white;
+                margin:2rem;
+            }
+            .stroke-horizontal {
+                width:100%;
+                height:20%;
+                background-color: red;
+            }
+            .dot {
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                position: absolute;
+            }
+            .dot1 {
+                background-color: black;
+                position: absolute;
+                left: 20%;
+                top:25%;
+            }
+            .dot2 {
+                background-color: black;
+                position: absolute;
+                left: 20%;
+                top:55%;
+            }
+            .dot3 {
+                background-color: black;
+                position: absolute;
+                left: 44%;
+                top:80%;
+            }
+            .dot4 {
+                background-color: black;
+                position: absolute;
+                left: 70%;
+                top:25%;
+            }
+            .dot5 {
+                background-color: black;
+                position: absolute;
+                left: 70%;
+                top:55%;
+            }
+            .dot6 {
+                background-color: black;
+                position: absolute;
+                left: 44%;
+            }
+            .circle2out{
+                position:absolute;
+                bottom:30%;
+                width:100%;
+                height:40%;
+                background-color: black;
+                border-radius: 100px;
+                z-index: 10;
+            }
+            .circle2in{
+                position:absolute;
+                bottom:40%;
+                left:10%;
+                width:80%;
+                height:20%;
+                background-color: #FBFF12;
+                border-radius: 100px;
+                z-index: 10;
+            }
+            .square1 {
+                height:15%;
+                width:20%;
+                background-color: black;
+                position: absolute;
+                left: 52%;
+                bottom: 10%;
+                transform: rotate(60deg);
+            }
+            .square2 {
+                height:15%;
+                width:20%;
+                background-color: black;
+                position: absolute;
+                right: 52%;
+                bottom: 10%;
+                transform: rotate(-60deg);
+            }
+            .square3 {
+                height:15%;
+                width:20%;
+                background-color: black;
+                position: absolute;
+                right: 15%;
+                bottom: 35%;
+            }
+            .square4 {
+                height:15%;
+                width:20%;
+                background-color: black;
+                position: absolute;
+                left: 15%;
+                bottom: 35%;
+            }
+            .square5 {
+                height:15%;
+                width:20%;
+                background-color: black;
+                position: absolute;
+                left: 27%;
+                bottom: 90%;
+                transform: rotate(50deg);
+            }
+            .square6 {
+                height:15%;
+                width:20%;
+                background-color: black;
+                position: absolute;
+                left: 53%;
+                bottom: 60%;
+                transform: rotate(-50deg);
+            }
+            .line {
+            transform: rotate(30deg);
+            background-color: #724CF9;
+            height: 10px;
+            position: absolute;
+            top:45%;
+            right:10%;
+            width:40%;  
+            }
+            .line2 {
+            transform: rotate(80deg);
+            background-color: black;
+            height: 10px;  
+            position: absolute; 
+            top: 50%; 
+            left: 10%;
+            width: 60%;
+            }
+            .line3 {
+            transform: rotate(20deg);
+            background-color: black;
+            height: 10px;  
+            position: absolute; 
+            top: 70%; 
+            left: 20%;
+            width: 50%;
+            }
+            .line4 {
+            transform: rotate(100deg);
+            background-color: #724CF9;
+            height: 10px;  
+            position: absolute; 
+            top: 50%; 
+            left: 60%;
+            width: 20%;
+            }
+            .circle5out{
+                position:absolute;
+                bottom:10%;
+                width:100%;
+                height:80%;
+                background-color: black;
+                border-radius: 90px;
+                z-index: 10;
+            }
+            .circle5in{
+                position:absolute;
+                bottom:20%;
+                left:45%;
+                width:10%;
+                height:60%;
+                background-color: #FF206E;
+                border-radius: 100px;
+                z-index: 10;
+            }
+            .button1{
+                color: white;
+                background-color: #41EAD4;
+                transition: transform 1s ease-in-out;
+                transform-origin: top left;
+            }
+            .button1:hover {
+                transform:translateY(32px) rotate(45deg) translateX(24px);
+            }
+
+            .button2{
+                color: white;
+                transition: transform 1.5s ease-in-out;
+                transform-origin: top left;
+            }
+
+            .button2:hover {
+                transform:rotate(360deg);
+            }
+
+            .button3{
+                color: white;
+                transition: transform 0.2s ease-in-out;
+                transform-origin: top left;
+                transition-property: opacity, transform;
+            }
+            .button3:hover {
+                transform:skewX(30deg) skewY(30deg) translate(-70px);
+                opacity: 0.02;
+            }
+
+            .button4{
+                transition: transform 1s ease-in-out;
+                transform-origin: top left;
+            }
+
+            .button4:hover {
+                transform:scale(3) translateX(-80px)translateY(-50px);
+            }
+
+            .button5{
+                color: white;
+                transition: transform 1s ease-in-out;
+                transform-origin: top left;
+            }
+            .button5:hover {
+                transform:matrix(0.1,0.2,0.3,0.4,0.5,0.6);
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="wrapper button3">
+            <div class="dot dot1"></div>
+            <div class="dot dot2"></div>
+            <div class="dot dot3"></div>
+            <div class="dot dot4"></div>
+            <div class="dot dot5"></div>
+            <div class="dot dot6"></div>
+        </div>
+        <div class="wrapper">
+            <div class="circle2out"></div>
+            <div class="circle2in button2"></div>
+         </div>
+        <div class="wrapper">
+            <div class="square1"></div>
+            <div class="square2"></div>
+            <div class="square3"></div>
+            <div class="square4"></div>
+            <div class="square5 button1"></div>
+            <div class="square6"></div>
+         </div>
+        <div class="wrapper button5">
+            <div class="stroke-horizontal line"></div>
+            <div class="stroke-horizontal line2"></div>
+            <div class="stroke-horizontal line3"></div>
+            <div class="stroke-horizontal line4"></div>
+        </div>
+        <div class="wrapper">
+            <div class="circle5out button4"></div>
+            <div class="circle5in"></div>
+        </div>
+    </body>
