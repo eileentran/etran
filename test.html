@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+<link href='https://fonts.googleapis.com/css?family=Anonymous Pro' rel='stylesheet'>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Dreams</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        
+        <style>
+          
+
+.sentence1 {
+  font-family: 'Anonymous Pro';
+  font-size: 70px;
+  color: black;
+}</style>
+
+    </head>
+    <body style= "margin: 10%;">
+
+      <p class="sentence1">
+         Eileen's 
+         <br>websites.
+        <span class="list1">
+         <span class="list2"></span>
+      </p>
+
+      <button>Die again</button>
+
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript">
+
+
+    		$(document).ready(function() {
+
+			function pickRandomWord(x){
+				y = x[Math.floor(Math.random()*x.length)];
+				return y;
+			}
+
+			function printRandomWord() {
+				var list_noun1 = pickRandomWord(noun1);
+				var list_noun2  = pickRandomWord(noun2);
+
+					$('.list1').html(list_noun1);
+					$('.list2').html(list_noun2);
+      }
+
+			printRandomWord();
+
+			$('button').click(function(){
+				printRandomWord();
+			});
+    });
+	    </script>
+
+		</style>
+	</body>
+</html>
