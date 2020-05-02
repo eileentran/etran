@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.overlay {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  background-color: black;
+  z-index: 1000;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.video-wrapper.loading {
+  background-color: gray;
+}
+.video-wrapper.loading #video {
+  display: none;
+}
+
+#video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.detection {
+  position: fixed;
+  transition: all;
+  transition-duration: .05s;
+
+}
+
+.point {
+  background: yellow;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  z-index: 100;
+  display: none;
+}
+
+.nose {
+  background-color: red;
+}
+
+.emoji {
+  position: absolute;
+  display: block;
+  font-size: 12em;
+  transform: translate(-50%,-50%);
+}
